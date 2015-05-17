@@ -1,3 +1,13 @@
+"""Roman numeral calculator
+
+Interface: 
+Roman.new("V") + Roman.new("IV") => Roman.new("IX")
+methods: +, -, *, ==  (don't need to go into fractions/decimals with division). 
+
+Think about how you would organize your code, as well as what other methods would be logical for an end user to expect. 
+If you have tests or can make this into a command like program that would be even better. 
+"""
+
 class Roman(object):
 	def __init__(self, roman):
 		self.roman = roman
