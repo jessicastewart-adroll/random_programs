@@ -3,16 +3,16 @@ from roman_calc import Roman
 
 class TestConvertToInt(unittest.TestCase):
 	def testOnes(self):
-		self.assertEqual(Roman("I").convert_to_int("I"), 1)
+		self.assertEqual(int(Roman("I")), 1)
 
 	def testTens(self):
-		self.assertEqual(Roman("XLIV").convert_to_int("XLIV"), 44)
+		self.assertEqual(int(Roman("XLIV")), 44)
 
 	def testHundreds(self):
-		self.assertEqual(Roman("CCLIII").convert_to_int("CCLIII"), 253)
+		self.assertEqual(int(Roman("CCLIII")), 253)
 
 	def testThousands(self):
-		self.assertEqual(Roman("MCMIX").convert_to_int("MCMIX"), 1909)
+		self.assertEqual(int(Roman("MCMIX")), 1909)
 
 class TestConvertToRoman(unittest.TestCase):
 	def testOnes(self):
