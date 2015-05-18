@@ -6,6 +6,12 @@ methods: +, -, *, ==  (don't need to go into fractions/decimals with division).
 
 Think about how you would organize your code, as well as what other methods would be logical for an end user to expect. 
 If you have tests or can make this into a command like program that would be even better. 
+
+possible extensions: 
+rich comparisons: <, <=, >, >=
+augmented assignment e.g +=
+more numeric conversions (complex, long, float)
+numeric coercion (arithmetic operators compatible with other numeric types)
 """
 
 class Roman(object):
