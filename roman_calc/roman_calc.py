@@ -11,24 +11,24 @@ If you have tests or can make this into a command like program that would be eve
 class Roman(object):
 	def __init__(self, roman):
 		self.roman = roman
-		self.romans_int = self.convert_to_int(self.roman) 
+		self.romans_int = self.__int__()
 
-	def convert_to_int(self, roman):
+	def __int__(self):
 		roman_to_int = {"I":1, "V":5, "X":10, "L":50, "C":100, "D":500, "M":1000}
 		i = 0
 		j = i+1
 		result = 0
 
-		while i < len(roman):
-			if j == len(roman):
-				result += roman_to_int[roman[i]]
+		while i < len(self.roman):
+			if j == len(self.roman):
+				result += roman_to_int[self.roman[i]]
 				i += 1
-			elif roman_to_int[roman[i]] >= roman_to_int[roman[j]]:
-				result += roman_to_int[roman[i]]
+			elif roman_to_int[self.roman[i]] >= roman_to_int[self.roman[j]]:
+				result += roman_to_int[self.roman[i]]
 				i += 1
 				j += 1
 			else:
-				result += roman_to_int[roman[j]] - roman_to_int[roman[i]]
+				result += roman_to_int[self.roman[j]] - roman_to_int[self.roman[i]]
 				i += 2
 				j += 2
 
